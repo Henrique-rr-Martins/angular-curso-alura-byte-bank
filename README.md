@@ -2,8 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
-## Curso de Angular da Alura
-### Conteúdo
+## Angular course from Alura
+### Content
  * Diretivas
  * Decorators
      * @NgModule
