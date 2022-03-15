@@ -1,3 +1,4 @@
+import { TransferenciaService } from './services/transferencia.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,11 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'byte-bank';
-  transferencias: any[] = [];
 
-  transferir(event): void {
-    const transferencia = {...event, data: new Date()}
-    this.transferencias.push(transferencia);
+  constructor(private transferenciaService: TransferenciaService){}
+
+  transferir(transferencia): void {
+    this.transferenciaService.add(transferencia);
   }
 
   exibirModalErro = function (msg: string): void {
