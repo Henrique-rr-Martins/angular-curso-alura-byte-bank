@@ -1,8 +1,7 @@
-<!--
-  para usar EventEmitter, você o chama como chamaria outro event
-  e passa para um método que vai gerenciar o $event recebido
-  ex.: (onSubmit)=""
--->
-<app-nova-transferencia></app-nova-transferencia>
-
-<app-extrato></app-extrato>
+<header>
+    <a routerLink="extrato">Bytebank</a>
+    <a routerLink="nova-transferencia" routerLinkActive="ativo">Nova transferência</a>
+</header>
+<main>
+    <router-outlet></router-outlet>
+</main>

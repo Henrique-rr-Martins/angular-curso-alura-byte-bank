@@ -9,13 +9,14 @@ import { ExtratoComponent } from './extrato/extrato.component';
 import { registerLocaleData } from '@angular/common';
 // import config. para usar padrões pt
 import localePt from '@angular/common/locales/pt';
+import { AppRoutingModule } from './app-routing.module';
 
 // função para configurar o padrão de uma linguagem e passar uma string que vai ser usada como alias
 registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [AppComponent, NovaTransferenciaComponent, ExtratoComponent],
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
   providers: [
     // provê o serviço de locale de pt
     { provide: LOCALE_ID, useValue: 'pt' },
